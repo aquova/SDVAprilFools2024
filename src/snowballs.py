@@ -5,13 +5,17 @@ import discord
 import db
 
 FAIL_FLAVOR = [
-    "{username} figured out the cheatcode to spam snowballs, and threw {num} at {target}!",
-    "{username} successfully rocketed a bucket of snowballs, and hit {target} with {num} in the face!",
+    "`{username}` slipped on ice while trying to throw a snowball at `{target}` and missed!",
+    "`{username}` went too X-TREME this time and the jetpack snapped on the bucket of snowballs flew in the wrong direction, completely missing `{target}`!",
+    "`{username}` didn't see the puffle passing by and tripped on top of it while trying to throw a snowball at `{target}`, missing their shot as a result!",
+    "`{username}` threw a snowball at `{target}` but `{target}` somehow teleported away, so the snowball missed!",
 ]
 
 CRIT_FLAVOR = [
-    "{username} slipped on ice while trying to throw a snowball at {target}, and missed!",
-    "{username} went too X-TREME and fired a rocket full of snowballs at {target}... but it flew in the wrong direction!",
+    "`{username}` figured out the shortcut button to spam snowballs and threw {num} snowballs at `{target}` in one go!",
+    "`{username}` successfully snapped a jetpack on a bucket full of snowballs and sent {num} snowballs directly to `{target}`'s face!",
+    "`{username}` came in with a tractor and dumped a load of {num} snowballs on top of `{target}`!",
+    "`{username}` activated their ninja skills and performed a wombo combo at `{target}` with {num} snowballs!",
 ]
 
 def throw_snowball(src: discord.User | discord.Member, target: discord.User | discord.Member) -> str:
