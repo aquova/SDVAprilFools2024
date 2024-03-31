@@ -1,0 +1,8 @@
+version: "3"
+services:
+  april:
+    image: april
+    restart: unless-stopped
+    container_name: april
+    volumes:
+      - ./src:/april
