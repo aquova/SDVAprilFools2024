@@ -21,7 +21,7 @@ CRIT_FLAVOR = [
 def throw_snowball(src: discord.User | discord.Member, target: discord.User | discord.Member) -> str:
     success = db.use_snowball(src.id)
     if not success:
-        return "You don't have any snowballs left!"
+        return f"{str(src)} doesn't have any snowballs left! How awkward!"
     odds = randint(1, 20)
     if odds == 1: # Fail
         flavor = choice(FAIL_FLAVOR)
